@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow: hidden;
+  margin: 0;
+  background: #111;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+.slide {
+  position: relative;
+  height: 80vh;
+  border-radius: 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: white;
+  flex: 1;
+  background-size: cover;
+  transition: all 0.7s ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.slide h3 {
+  position: absolute;
+  font-size: 24px;
+  bottom: 20px;
+  left: 20px;
+  opacity: 0;
+}
+.slide.active{
+  flex: 6;
+}
+.slide.active h3{
+  opacity: 1;
+  transition: all 0.3s ease;
+}
